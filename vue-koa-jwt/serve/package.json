@@ -1,0 +1,26 @@
+{
+  "name": "vue-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioredis": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^4.0.0",
+    "koa-router": "^9.4.0",
+    "koa2-cors": "^2.0.6",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "koa-session2": "^2.2.10"
+  }
+}
