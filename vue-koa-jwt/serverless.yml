@@ -1,0 +1,26 @@
+name: fullstack-application-vue
+
+vuepro:
+  component: '@serverless/tencent-website'
+  # inputs 为 @serverless/tencent-website 组件的输入
+  # 具体配置说明参考：https://github.com/serverless-components/tencent-website/blob/master/docs/configure.md
+  inputs:
+    code:
+      src: dist
+      root: vuepro
+      hook: npm run build
+    env:
+        # 下面的 API服务部署后，获取对应的 api 请求路径
+      apiUrl: ${serve.url}
+
+serve:
+  component: '@serverless/tencent-koa'
+  # inputs 为 @serverless/tencent-koa 组件的输入
+  # 具体配置说明参考：https://github.com/serverless-components/tencent-koa/blob/master/docs/configure.md
+  inputs:
+    code: ./serve
+    functionName: fullstack-vue-api
+    apigatewayConf:
+      protocol: https  
+      enableCORS: true
+  

@@ -1,0 +1,48 @@
+
+Post http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "Jim",
+  "password": "123456"
+}
+
+
+###
+get http://localhost:3000/getUserInfor
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiSmltIiwiaWF0IjoxNTk3NzUxMzQ3LCJleHAiOjE1OTc3NTEzNzd9.ySoyx3N2oOuo5JnARbf6hZx4XBjZvclzi5W7zq8o-lY
+
+###
+Post http://service-hwuipz1m-1251040149.gz.apigw.tencentcs.com/release/login
+Content-Type: application/json
+
+{
+  "username": "Jim",
+  "password": "123456"
+}
+
+###
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNTY4NzU5OTIyfQ.RT6wszuCeFLwC_6ksmNMIELxiC5s-uRivfRxyZof5ag"
+}
+
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token": ""
+}
+
+###
+
+get http://localhost:3000/
+Content-Type: application/json
+
+{
+  "username": "Jim",
+  "password": "123456"
+}
